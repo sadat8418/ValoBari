@@ -37,10 +37,10 @@ function Header() {
       active: authStatus,
   },
   ]
-
+//#7c89a1
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='mt-2 shadow #798dad'>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>

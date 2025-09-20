@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import Logo from '../Logo'
 
 function Footer() {
+
+    //629197 , 378c89
   return (
-    <section className="relative overflow-hidden py-10 bg-gray-400 border border-t-2 border-t-black z-10">
+    <section className="relative overflow-hidden py-10 bg-[\#798dad] border-t-1 border-t-[#378c89] z-10">
             <div className="relative z-10 mx-auto max-w-7xl px-4">
                 <div className="-m-6 flex flex-wrap">
                     <div className="w-full p-6 md:w-1/2 lg:w-5/12">
@@ -13,15 +15,15 @@ function Footer() {
                                 <Logo width="30px" />
                             </div>
                             <div>
-                                <p className="text-sm text-gray-600">
-                                    &copy; Copyright 2023. All Rights Reserved by DevUI.
+                                <p className="text-sm text-gray-900">
+                                    &copy; Copyright 2024. All Rights Reserved by Sadat Arefin.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-2/12">
                         <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-900">
                                 Company
                             </h3>
                             <ul>
@@ -62,7 +64,7 @@ function Footer() {
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-2/12">
                         <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-900">
                                 Support
                             </h3>
                             <ul>
@@ -103,7 +105,7 @@ function Footer() {
                     </div>
                     <div className="w-full p-6 md:w-1/2 lg:w-3/12">
                         <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-900">
                                 Legals
                             </h3>
                             <ul>
