@@ -40,7 +40,7 @@ function Header() {
 //#7c89a1
 
   return (
-    <header className='mt-2 shadow '>
+    <header className='mt-2 shadow text-shadow-lg/30'>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>

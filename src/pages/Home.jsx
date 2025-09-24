@@ -21,17 +21,7 @@ function Home() {
             
             <div className="w-full py-0 mt-0 text-center">
                <Hero />
-                    
-                {/* <Container>
-                    
-                    <div className="w-full py-0 mt-0 text-center">
-                        <div >
-                        <ThreeScene />
-                        </div>
-                    </div>
-                </Container> */}
-            
-                   
+
             </div>
             
         )
