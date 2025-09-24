@@ -5,7 +5,7 @@ import authService from "./appwrite/auth"
 import {login, logout} from "./store/authSlice"
 import { Footer, Header } from './components'
 import { Outlet } from 'react-router-dom'
-import { Button } from "@/components/ui/button"
+
 
 
 function App() {
@@ -39,15 +39,4 @@ function App() {
 }
 
 export default App
-// {
-//   return (
-//     <Canvas>
-//       <ambientLight intensity={Math.PI / 2} />
-//       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
-//       <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
-//       <Box position={[-1.2, 0, 0]} />
-//       <Box position={[1.2, 0, 0]} />
-//       <OrbitControls />
-//     </Canvas>
-//   )
-// }
+
