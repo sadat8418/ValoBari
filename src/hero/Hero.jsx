@@ -9,17 +9,24 @@ import {useSelector} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import Video from '../assets/maldivesVideo.mp4'
+import { Header } from '../components'
 
 function Hero() {
 
     return (
         <div className='hero'>
+            
             <video autoPlay loop muted id='video'>
                 <source src={Video} type='video/mp4' />
+                
             </video>
-            <div className="overlay"></div>
+          
+           
             <div className="content">
-                <h1 className='text-1xl'>All your notes in one place</h1>
+                 <div className="overlay">
+                  <Header/>
+            </div>
+                <h1 className='text-1xl'>All your memories in one place</h1>
                
                 {/* <form className="form flex flex-col items-center justify-center"> */}
 
@@ -27,7 +34,6 @@ function Hero() {
                          
                             <Link to='/login'>
                             Login to explore
-
               </Link>
                                       </h1>
                     {/* <div>
