@@ -1,5 +1,6 @@
 import Select from "./Select";
 import Header from "./Header/Header";
+import Header2 from "./Header/Header2";
 import Footer from "./Footer/Footer";
 import Container from "./container/Container";
 import Logo from "./Logo";
@@ -14,6 +15,7 @@ import AuthLayout from "./AuthLayout";
 import Input from "./Input";
 export {
     Header,
+    Header2,
     Footer,
     Container,
     Logo,

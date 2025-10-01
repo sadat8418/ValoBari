@@ -6,15 +6,17 @@ import { useNavigate } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
 
 
-function Header() {
+function Header(props) {
+  
+  
   const authStatus = useSelector((state) => state.auth.status)
   const navigate = useNavigate()
-
+ 
   const navItems = [
     {
       name: 'Home',
       slug: "/",
-      active: true
+      active: true,
     }, 
     {
       name: "Login",
@@ -40,7 +42,7 @@ function Header() {
 //#7c89a1
 
   return (
-    <header className='mt-2 shadow '>
+    <header className={`mt-2 shadow ${props.shadow} `}>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>
