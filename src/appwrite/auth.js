@@ -1,5 +1,6 @@
+import conf from "../conf/conf";
 export class AuthService {
-    backendUrl = "http://localhost:5000";
+    backendUrl = conf.appwriteUrl;
 
     async createAccount({ name, email, password }) {
         const res = await fetch(`${this.backendUrl}/register`, {
