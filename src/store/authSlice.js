@@ -1,25 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
-//auth er store , will track all auth
-const initialState = { //user authenticated? 
-    status : false,
-    userData: null
-}
 
 const authSlice = createSlice({
     name: "auth",
-    initialState,
+    initialState: {
+        status: false,
+        user: null,
+        token: null
+    },
     reducers: {
-        login: (state, action) => {  // track auth of user when login 
+        login: (state, action) => {
             state.status = true;
-            state.userData = action.payload.userData;
+            state.user = action.payload.user;
+            state.token = action.payload.token;
         },
         logout: (state) => {
             state.status = false;
-            state.userData = null;
+            state.user = null;
+            state.token = null;
+        },
+        setUser: (state, action) => {
+            state.user = action.payload;
+            state.status = true;
         }
-     }
-})
+    }
+});
 
-export const {login, logout} = authSlice.actions; // we export actions (login, logout)
-
+export const { login, logout, setUser } = authSlice.actions;
 export default authSlice.reducer;

@@ -1,67 +1,54 @@
-import conf from '../conf/conf.js';
-import { Client, Account, ID } from "appwrite";
-// eitai main connection ,  backend er sathe frontend connect
-
-
-// appwrite a account.create() e sob manually dite hoy (default ta use korle)
-// UI & business logic 2tai inject kora valo na ...
 export class AuthService {
-    client = new Client();
-    account; // new keyword diye banale setEndpoint, setProject dite hobe  
+    backendUrl = "http://localhost:5000";
 
-    constructor() {  // (account) object banale tokhon client toiri hobe , class a bydefault dile resource waste hobe 
-        this.client
-            .setEndpoint(conf.appwriteUrl)
-            .setProject(conf.appwriteProjectId);
-        this.account = new Account(this.client);
-            
+    async createAccount({ name, email, password }) {
+        const res = await fetch(`${this.backendUrl}/register`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, password })
+        });
+
+        return await res.json();
     }
 
-    //account toiri , createAccount easy in appwrite but we have created a uiversal method
-    async createAccount({email, password, name}) {
-        try {
-            const userAccount = await this.account.create(ID.unique(), email, password, name); //unique user id must
-            if (userAccount) {
-                // call another method (login o kore dicci) login method niche
-                return this.login({email, password});
-            } else {
-               return  userAccount;
-            }
-        } catch (error) {
-            throw error;
-        }
-    }
+    async login({ email, password }) {
+        const res = await fetch(`${this.backendUrl}/login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password })
+        });
 
-    async login({email, password}) {
-        try {
-            return await this.account.createEmailPasswordSession(email, password);
-        } catch (error) {
-            throw error;
+        const data = await res.json();
+
+        if (data.token) {
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("role", data.role);   // ⭐ store admin role
         }
+
+        return data;
     }
 
     async getCurrentUser() {
-        try {
-            return await this.account.get();
-        } catch (error) {
-            console.log("Appwrite serive :: getCurrentUser :: error", error);
-        }
+        const token = localStorage.getItem("token");
+        if (!token) return null;
 
-        return null;
+        const res = await fetch(`${this.backendUrl}/me`, {
+            headers: { Authorization: `Bearer ${token}` }
+        });
+
+        return await res.json();
+    }
+
+    isAdmin() {
+        return localStorage.getItem("role") === "admin";
     }
 
     async logout() {
-
-        try {
-            await this.account.deleteSessions(); // appwrite methods
-        } catch (error) {
-            console.log("Appwrite serive :: logout :: error", error);
-        }
+        localStorage.removeItem("token");
+        localStorage.removeItem("role");
+        return true;
     }
 }
 
-const authService = new AuthService(); //object creation new keyword diye
-
-export default authService
-
-
+const authService = new AuthService();
+export default authService;

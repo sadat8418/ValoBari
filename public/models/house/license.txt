@@ -1,0 +1,11 @@
+Model Information:
+* title:	Background Residential Building 02
+* source:	https://sketchfab.com/3d-models/background-residential-building-02-5f88aa0c77484b68a4761b487ce57154
+* author:	Gerhald (https://sketchfab.com/Gerhald)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Background Residential Building 02" (https://sketchfab.com/3d-models/background-residential-building-02-5f88aa0c77484b68a4761b487ce57154) by Gerhald (https://sketchfab.com/Gerhald) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

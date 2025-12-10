@@ -7,7 +7,7 @@ import {useSelector} from 'react-redux'
 // import { Link } from 'react-router-dom'
 
 import Video2 from '../assets/1.mp4'
-import Video3 from '../assets/4.mp4'
+
 import { Header } from '../components'
 
 function Hero() {
@@ -19,9 +19,7 @@ function Hero() {
                 
             </video>
              
-              <video autoPlay loop muted id='video2'>
-                <source src={Video3} type='video/mp4' />   
-            </video>
+            
             <div className="content" >
                  <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/60 to-transparent">
                  

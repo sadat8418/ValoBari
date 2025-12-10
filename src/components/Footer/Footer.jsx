@@ -1,27 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../Logo'
-
+import House from '../Box/house'
 function Footer() {
 
     //629197 , 378c89
   return (
-    <section className="relative overflow-hidden py-10 bg-[\#798dad] border-t-1 border-t-[#378c89] z-10">
+    <section className="relative overflow-hidden py-10 bg-[#7e7d87] border-t-1 border-t-[#8B8892] z-10">
             <div className="relative z-10 mx-auto max-w-7xl px-4">
                 <div className="-m-6 flex flex-wrap">
                     <div className="w-full p-6 md:w-1/2 lg:w-5/12">
                         <div className="flex h-full flex-col justify-between">
-                            <div className="mb-4 inline-flex items-center">
-                                <Logo width="30px" />
+                            <div className=" inline-flex items-center">
+                                <House  />
                             </div>
                             <div>
                                 <p className="text-sm text-gray-900">
-                                    &copy; Copyright 2024. All Rights Reserved by Sadat Arefin.
+                                    &copy; Copyright 2025. All Rights Reserved by Sadat Arefin.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-2/12">
+                    <div className=" p-6 md:w-1/2 lg:w-2/12 z-10">
                         <div className="h-full">
                             <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-900">
                                 Company
@@ -29,7 +28,7 @@ function Footer() {
                             <ul>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" text-base font-medium text-gray-900 hover:text-gray-700 "
                                         to="/"
                                     >
                                         Features
